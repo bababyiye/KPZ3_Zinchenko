@@ -8,4 +8,3 @@ namespace task5
         OpenAndClose
     }
 }
-
