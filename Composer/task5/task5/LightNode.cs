@@ -26,5 +26,10 @@
         }
 
         public abstract void Accept(IVisitor visitor);
+
+        public IEnumerable<LightNode> Traverse()
+        {
+            return new LightNodeEnumerator(this);
+        }
     }
 }
