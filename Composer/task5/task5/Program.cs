@@ -19,4 +19,12 @@ static void Main(string[] args)
     }
 
     Console.ReadKey();
+
+
+    var addClassCmd = new AddClassCommand(root, "hook-test");
+    var addChildCmd = new AddChildCommand(root, span);
+
+    addClassCmd.Execute();
+    addChildCmd.Execute();
+
 }
