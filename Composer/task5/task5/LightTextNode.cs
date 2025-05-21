@@ -20,6 +20,11 @@ namespace task5
         protected override void OnRemoved() { }
         protected override void OnClassListApplied() { }
 
+        protected override void OnTextRendered()
+        {
+            Console.WriteLine("[TextNode] Text rendered: " + _text);
+        }
+
         public override void Accept(IVisitor visitor)
         {
             visitor.VisitText(this);
