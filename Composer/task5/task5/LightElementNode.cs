@@ -48,10 +48,26 @@ namespace task5
             }
         }
 
-        protected override void OnCreated() { }
-        protected override void OnInserted() { }
-        protected override void OnRemoved() { }
-        protected override void OnClassListApplied() { }
+        protected override void OnCreated()
+        {
+            Console.WriteLine($"[{TagName}] created.");
+        }
+
+        protected override void OnInserted()
+        {
+            Console.WriteLine($"[{TagName}] inserted into tree.");
+        }
+
+        protected override void OnRemoved()
+        {
+            Console.WriteLine($"[{TagName}] removed from tree.");
+        }
+
+        protected override void OnClassListApplied()
+        {
+            Console.WriteLine($"[{TagName}] CSS class list updated.");
+        }
+
         protected override void OnTextRendered() { }
 
         public override int ChildCount => _children.Count;
